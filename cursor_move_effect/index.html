@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Free Web tutorials" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Pratik Bhatt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Moving Effect</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="text">
+        <h1>vatsinn.com</h1>
+    </div>
+    <div class="show"></div>
+
+    <script>
+        let position = document.documentElement;
+        position.addEventListener("mousemove", (e) => {
+            position.style.setProperty("--x", e.clientX + "px");
+            position.style.setProperty("--y", e.clientY + "px");
+        });
+    </script>
+</body>
+
+</html>
