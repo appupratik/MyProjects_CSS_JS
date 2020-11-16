@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #ff4e2b;
+    display: flex;
+}
+
+.container .imageBox {
+    position: relative;
+    width: 450px;
+    height: 100%;
+    background: url('countdown_newyear.jpg');
+    background-size: cover;
+}
+
+.container .box {
+    display: flex;
+    width: calc(100% - 450px);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .box h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.container .box h2 span {
+    font-size: 6em;
+    font-weight: 700;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+.container .box h2 span i {
+    font-style: normal;
+    color: rgb(237, 253, 6)
+}
+
+.container .box .contdown {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .box .contdown div {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+.container .box .contdown div::before {
+    content: 'vatsinn';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    font-size: 0.35em;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 1px;
+}
+
+.container .box .contdown div#day::before {
+    content: 'days';
+}
+
+.container .box .contdown div#hour::before {
+    content: 'hours';
+}
+
+.container .box .contdown div#minute::before {
+    content: 'minutes';
+}
+
+.container .box .contdown div#second,
+.container .box .contdown div#second::before {
+    content: 'seconds';
+    color: #ff0;
+}
+
+@media (max-width: 991px) {
+    .container .imageBox {
+        display: none;
+    }
+    .container .box {
+        display: flex;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container .box h2 {
+        font-size: 1em;
+    }
+    .container .box h2 span {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 400px) {
+    .container .box h2 {
+        font-size: 0.7em;
+    }
+    .container .box h2 span {
+        line-break: auto;
+        margin-top: 100px;
+        font-size: 3em;
+    }
+    .container .box .contdown div {
+        font-size: 2em;
+    }
+}
